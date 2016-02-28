@@ -1,0 +1,12 @@
+{
+  "name": "sam-irc-nodejs-client",
+  "version": "0.1.0",
+  "main": "client.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-prebuilt": "^0.36.7"
+  },
+  "author": "Etienne Leroy"
+}
