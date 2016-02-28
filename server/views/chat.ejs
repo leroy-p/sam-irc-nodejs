@@ -1,0 +1,39 @@
+<!-- /views/pages/chat.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>IRC - Channel</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <h1>IRC</h1>
+    <main>
+      <div>
+        <div>
+          <form method="post" action="" id="form">
+            <input type="text" id="hidden_username" name="hidden_username"
+                  value="<%=username%>" hidden/>
+            <div class="input-group">
+              <input type="text" class="form-control" name="message" id="message"/>
+              <span class="input-group-btn">
+                <input id="input-send-sbmt" class="btn btn-default"
+                    type="submit" name="send_message" value="Send"/>
+              </span>
+            </div>
+          </form>
+
+          <section id="messages_zone">
+          </section>
+
+        </div>
+      </div>
+      <a href="/logout" class="btn btn-warning">Logout</a>
+    </main>
+    <script type="text/javascript" src="/scripts/chat.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/scripts/window-btn.js"></script>
+  </body>
+</html>
